@@ -1,6 +1,6 @@
 # Voicebot mit Whisper
 
-Bachelorarbeit von Yazan Sy
+Bachelorarbeit von Yazan Alhelal
 
 ## Projektbeschreibung
 
@@ -210,5 +210,5 @@ Diese Dateien sind entweder zu groß, lokal erzeugt oder enthalten sensible Date
 
 ## Autor
 
-Yazan Sy
+Yazan Alhelal
 Bachelorarbeit: Konzeption und prototypische Umsetzung eines Voicebots unter Verwendung von Whisper
