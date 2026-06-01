@@ -208,7 +208,3 @@ models/
 
 Diese Dateien sind entweder zu groß, lokal erzeugt oder enthalten sensible Daten.
 
-## Autor
-
-Yazan Alhelal
-Bachelorarbeit: Konzeption und prototypische Umsetzung eines Voicebots unter Verwendung von Whisper
