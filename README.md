@@ -54,10 +54,10 @@ Beispiel:
 models/model.gguf
 ```
 
-GGUF-Modelle können z. B. auf Hugging Face heruntergeladen werden:
+GGUF-Modelle können auf Hugging Face heruntergeladen werden:
 
 ```text
-https://huggingface.co/models?library=gguf
+[https://huggingface.co/models?library=gguf](https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF?utm_source=chatgpt.com](https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF?utm_source=chatgpt.com)
 ```
 
 Wichtig ist, dass das Modell im GGUF-Format vorliegt und mit llama.cpp kompatibel ist.
