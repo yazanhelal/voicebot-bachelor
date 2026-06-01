@@ -62,19 +62,6 @@ https://huggingface.co/models?library=gguf
 
 Wichtig ist, dass das Modell im GGUF-Format vorliegt und mit llama.cpp kompatibel ist.
 
-## Beispiel für ein mögliches Modell
-
-Es kann ein kleines quantisiertes GGUF-Modell verwendet werden, zum Beispiel ein Q4-Modell. Für schwächere Hardware empfiehlt sich ein kleineres Modell mit 1B bis 3B Parametern.
-
-Beispiele für Suchbegriffe auf Hugging Face:
-
-```text
-Qwen GGUF Q4
-Mistral GGUF Q4
-Llama GGUF Q4
-TinyLlama GGUF
-```
-
 ## Projektstruktur
 
 ```text
