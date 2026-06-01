@@ -1,0 +1,19 @@
+FROM ubuntu:24.04
+
+WORKDIR /llama
+
+RUN apt-get update && apt-get install -y \
+    git \
+    cmake \
+    build-essential \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN git clone --depth 1 https://github.com/ggml-org/llama.cpp.git .
+
+RUN cmake -B build -DGGML_NATIVE=OFF -DGGML_CPU=ON \
+    && cmake --build build --config Release -j 4 --target llama-server
+
+EXPOSE 8080
+
+CMD ["./build/bin/llama-server", "-m", "/models/Llama-3.2-3B-Instruct-Q4_K_L.gguf", "-c", "2048", "--host", "0.0.0.0", "--port", "8080"]

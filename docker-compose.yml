@@ -1,0 +1,39 @@
+services:
+  llama:
+    build:
+      context: .
+      dockerfile: Dockerfile.llama
+    container_name: voicebot-llama
+    volumes:
+      - ./models:/models
+    ports:
+      - "8080:8080"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: voicebot-backend
+    depends_on:
+      - llama
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - LLAMA_SERVER_URL=http://llama:8080/completion
+      - RUNNING_IN_DOCKER=true
+      - DATABASE_PATH=/app/data/voicebot.db
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: voicebot-frontend
+    depends_on:
+      - backend
+    environment:
+      - VITE_BACKEND_URL=http://127.0.0.1:5000
+    ports:
+      - "5173:5173"
